@@ -1,0 +1,59 @@
+{
+    "metadata": {
+      "name": "VIRTUAL_HOST_NAME",
+      "namespace": "NAMESPACE",
+      "labels": {},
+      "annotations": {},
+      "disable": false
+    },
+    "spec": {
+      "proxy": "UDP_PROXY",
+      "domains": [],
+      "routes": [
+        {
+          "kind": "route",
+          "tenant": "TENANT_ID",
+          "namespace": "NAMESPACE",
+          "name": "ROUTE_NAME"
+        }
+      ],
+      "advertise_policies": [
+        {
+          "kind": "advertise_policy",
+          "tenant": "TENANT_ID",
+          "namespace": "NAMESPACE",
+          "name": "ADVERTISE_POLICY_NAME"
+        }
+      ],
+      "waf_type": {
+        "disable_waf": {}
+      },
+      "no_authentication": {},
+      "request_headers_to_add": [],
+      "request_headers_to_remove": [],
+      "response_headers_to_add": [],
+      "response_headers_to_remove": [],
+      "add_location": false,
+      "custom_errors": {},
+      "disable_default_error_pages": false,
+      "max_request_header_size": 0,
+      "no_challenge": {},
+      "rate_limiter_allowed_prefixes": [],
+      "idle_timeout": 0,
+      "disable_dns_resolve": false,
+      "non_default_loadbalancer": {},
+      "connection_idle_timeout": 0,
+      "default_header": {},
+      "enable_path_normalize": {},
+      "cookies_to_modify": [],
+      "http_protocol_options": {
+        "http_protocol_enable_v1_v2": {}
+      },
+      "slow_ddos_mitigation": {
+        "request_headers_timeout": 10000,
+        "request_timeout": 60000
+      },
+      "domain_cert_map": {},
+      "max_direct_response_body_size": 0
+    }
+  }

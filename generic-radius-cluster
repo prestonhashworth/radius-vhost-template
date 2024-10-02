@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "name": "CLUSTER-NAME",
+    "namespace": "NAMESPACE",
+    "labels": {},
+    "annotations": {},
+    "disable": false
+  },
+  "spec": {
+    "endpoints": [
+      {
+        "kind": "endpoint",
+        "tenant": "TENANT_ID",
+        "namespace": "NAMESPACE",
+        "name": "ENDPOINT_NAME"
+      }
+    ],
+    "health_checks": [],
+    "loadbalancer_algorithm": "LB_OVERRIDE",
+    "circuit_breaker": {
+      "priority": "DEFAULT",
+      "connection_limit": 1024,
+      "pending_requests": 1024,
+      "retries": 1024,
+      "max_requests": 1024
+    },
+    "endpoint_subsets": [],
+    "default_subset": {},
+    "fallback_policy": "NO_FALLBACK",
+    "connection_timeout": 0,
+    "http_idle_timeout": 0,
+    "outlier_detection": {
+      "consecutive_5xx": 0,
+      "interval": 0,
+      "base_ejection_time": 0,
+      "max_ejection_percent": 0,
+      "consecutive_gateway_failure": 0
+    },
+    "endpoint_selection": "LOCAL_PREFERRED",
+    "auto_http_config": {},
+    "no_panic_threshold": {},
+    "disable_proxy_protocol": {}
+  }
+}

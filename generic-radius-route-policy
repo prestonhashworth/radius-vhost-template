@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "name": "ROUTE_NAME",
+    "namespace": "NAMESPACE",
+    "labels": {},
+    "annotations": {},
+    "disable": false
+  },
+  "spec": {
+    "routes": [
+      {
+        "match": [],
+        "route_destination": {
+          "destinations": [
+            {
+              "cluster": [
+                {
+                  "kind": "cluster",
+                  "tenant": "TENANT_ID",
+                  "namespace": "NAMESPACE",
+                  "name": "DESTINATION_NAME"
+                }
+              ],
+              "weight": 0,
+              "priority": 1,
+              "endpoint_subsets": {}
+            }
+          ],
+          "timeout": 0,
+          "auto_host_rewrite": false,
+          "endpoint_subsets": {},
+          "hash_policy": [],
+          "priority": "DEFAULT",
+          "spdy_config": {
+            "use_spdy": false
+          },
+          "do_not_retract_cluster": {}
+        },
+        "disable_location_add": false,
+        "service_policy": {
+          "disable": false
+        },
+        "waf_type": {
+          "inherit_waf": {}
+        },
+        "request_headers_to_add": [],
+        "request_headers_to_remove": [],
+        "response_headers_to_add": [],
+        "response_headers_to_remove": [],
+        "disable_custom_script": false,
+        "inherited_bot_defense_javascript_injection": {},
+        "skip_lb_override": false
+      }
+    ]
+  }
+}

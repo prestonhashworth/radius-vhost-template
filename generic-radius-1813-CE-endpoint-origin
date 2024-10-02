@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "name": "ENDPOINT_NAME",
+    "namespace": "NAMESPACE",
+    "labels": {},
+    "annotations": {},
+    "disable": false
+  },
+  "spec": {
+    "where": {
+      "site": {
+        "ref": [
+          {
+            "kind": "site",
+            "tenant": "TENANT-ID",
+            "namespace": "system",
+            "name": "SITE_NAME"
+          }
+        ],
+        "network_type": "VIRTUAL_NETWORK_SITE_LOCAL",
+        "disable_internet_vip": {}
+      }
+    },
+    "protocol": "UDP",
+    "port": 1813,
+    "health_check_port": 0,
+    "ip": "IP_ADDRESS"
+  }
+}

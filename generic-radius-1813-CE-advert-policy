@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "name": "ADVERT-POLICY-NAME",
+    "namespace": "NAMESPACE",
+    "labels": {},
+    "annotations": {},
+    "disable": false
+  },
+  "spec": {
+    "where": {
+      "site": {
+        "ref": [
+          {
+            "kind": "site",
+            "tenant": "TENANT",
+            "namespace": "system",
+            "name": "CE_SITE_NAME"
+          }
+        ],
+        "network_type": "VIRTUAL_NETWORK_SITE_LOCAL",
+        "disable_internet_vip": {}
+      }
+    },
+    "public_ip": [],
+    "protocol": "UDP",
+    "port": 1813,
+    "skip_xff_append": false
+  }
+}
